@@ -1,0 +1,1 @@
+/home/mirks/Documents/42-Cursus/adventOfCode2021/day2/build/classes/kotlin/main/MainKt$main$1.class:/home/mirks/Documents/42-Cursus/adventOfCode2021/day2/build/classes/kotlin/main/MainKt.class
