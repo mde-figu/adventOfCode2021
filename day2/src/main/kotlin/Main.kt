@@ -7,6 +7,9 @@ fun main(args: Array<String>) {
 
     var depth: Int = 0
     var range: Int = 0
+    var aim: Int = 0
+    var horizontalMove: Int = 0
+    var aimedDepth: Int = 0
 
     inputStream.bufferedReader().forEachLine { lineList.add(it) }
     lineList.forEach{
@@ -17,7 +20,13 @@ fun main(args: Array<String>) {
             "down" -> depth = depth + movement[1].toInt()
             "up" -> depth = depth - movement[1].toInt()
         }
+        when(movement[0]){
+            "forward" -> {horizontalMove = horizontalMove + movement[1].toInt(); aimedDepth = aimedDepth + (aim * movement[1].toInt())}
+            "down" -> aim = aim + movement[1].toInt()
+            "up" -> aim = aim - movement[1].toInt()
+        }
         println(movement[0] + "> " + movement[1]+ "range: " + range + "depth: " + depth)
-        println(range * depth)
+        println("final" + aimedDepth * horizontalMove)
+        //println(range * depth)
     }
 }
